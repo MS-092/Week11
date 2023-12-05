@@ -5,7 +5,7 @@ class FancyFood:
     item_counter = 0
     def __init__(self, food_name, amount_ordered):
         FancyFood.item_counter += 1
-        self.__item_counter = FancyFood.item_number
+        self.__item_number = FancyFood.item_counter
         self.__food_name = food_name
         self.__amount_ordered = amount_ordered
         self.__standard_price = self.PriceList()
@@ -42,4 +42,4 @@ class FancyFood:
 
 # Accessors method for class
     def __str__(self):
-        return f"Item#{self.__item_counter}\nFood: {self.__food_name} \nAmount: {self.__amount_ordered} lbs\nStandard Price: ${self.__standard_price:.2f}\nCost: ${self.__calculated_price:.2f}\n"
+        return f"Item#{self.__item_number}\nFood: {self.__food_name} \nAmount: {self.__amount_ordered} lbs\nStandard Price: ${self.__standard_price:.2f}\nCost: ${self.__calculated_price:.2f}\n"
